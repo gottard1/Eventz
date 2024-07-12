@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BASE_URL</key>
+	<string>https://eventz-production-c270.up.railway.app/</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BungeeSpice-Regular.ttf</string>
+		<string>Blinker-Light.ttf</string>
+		<string>Blinker-ExtraBold.ttf</string>
+		<string>Blinker-Regular.ttf</string>
+		<string>Blinker-Bold.ttf</string>
+		<string>Blinker-SemiBold.ttf</string>
+	</array>
+</dict>
+</plist>
