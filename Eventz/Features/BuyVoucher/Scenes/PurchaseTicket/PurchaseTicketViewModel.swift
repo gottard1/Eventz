@@ -10,6 +10,7 @@ import SwiftUI
 final class PurchaseTicketViewModel: ObservableObject {
     @Published var selectedTickets = [TicketType]()
     
+    /// MOCK
     let partyInfo = PartyInfo(
         local: "Dalla Club",
         name: "Festa de formandos UFSP",
@@ -17,6 +18,7 @@ final class PurchaseTicketViewModel: ObservableObject {
         address: "Rua Antônio da Veiga - 405"
     )
     
+    /// Mock
     var ticketLot: [TicketLot] = [
         TicketLot(
             section: "1 Lote",

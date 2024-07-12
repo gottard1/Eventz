@@ -21,6 +21,7 @@ struct ProfileModel {
 
 class ProfileHomeViewModel: ObservableObject {
     
+    /// Mock
     var profile: ProfileModel = ProfileModel(
         name: "Fabio Assunção",
         email: "fabio.assuncao@eventz.com",

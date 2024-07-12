@@ -15,15 +15,8 @@ struct Place: Identifiable {
 }
 
 struct MapViewControllerRepresentable: UIViewControllerRepresentable {
-    
-    func makeUIViewController(context: Context) -> some UIViewController {
-        return MapViewController()
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
-    }
-    
+    func makeUIViewController(context: Context) -> some UIViewController { return MapViewController() }
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
 }
 
 final class MapViewController: UIViewController {
@@ -73,7 +66,4 @@ final class MapViewController: UIViewController {
     
 }
 
-extension MapViewController: MKMapViewDelegate {
-    
-    
-}
+extension MapViewController: MKMapViewDelegate { }

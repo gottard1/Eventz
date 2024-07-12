@@ -27,7 +27,6 @@ struct MyTicketsListView: View {
                         MyTicketsListCardView(data: viewModel.tickets[index])
                             .shadow(radius: 8)
                     }
-
                 }
                 
                 Spacer(minLength: 32)

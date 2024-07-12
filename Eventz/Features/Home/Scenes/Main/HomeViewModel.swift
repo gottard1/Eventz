@@ -18,37 +18,36 @@ final class HomeViewModel: ObservableObject {
     @Published var isMocked: Bool = true
     
     @MainActor func getEvents(request: GetEventsRequestModel) {
-        Task {
-            if isMocked {
-                self.events = EventModel.getMock()
-            } else {
-                do {
-                    isLoading = true
-                    let events = try await NetworkManager.shared.request(
-                        httpMethod: .post,
-                        endpoint: .getEvents,
-                        body: request,
-                        responseType: [EventModel].self
-                    )
-                    
-                    if let events {
-                        for event in events {
-                            if !categories.contains(where: { $0 == event.type }), !event.type.isEmpty {
-                                categories.append(event.type)
-                            }
-                        }
-                        
-                        self.events = events
-                    }
-                    
-                    isLoading = false
-                } catch(let error) {
-                    alertMessage = (error as? HTTPError)?.message ?? "Erro desconhecido"
-                    isLoading = false
-                    showAlert = true
-                }
-            }
-        }
+        self.events = EventModel.getMock()
+        
+///             Connection with API
+//        Task {
+//            do {
+//                isLoading = true
+//                let events = try await NetworkManager.shared.request(
+//                    httpMethod: .post,
+//                    endpoint: .getEvents,
+//                    body: request,
+//                    responseType: [EventModel].self
+//                )
+//                
+//                if let events {
+//                    for event in events {
+//                        if !categories.contains(where: { $0 == event.type }), !event.type.isEmpty {
+//                            categories.append(event.type)
+//                        }
+//                    }
+//                    
+//                    self.events = events
+//                }
+//                
+//                isLoading = false
+//            } catch(let error) {
+//                alertMessage = (error as? HTTPError)?.message ?? "Erro desconhecido"
+//                isLoading = false
+//                showAlert = true
+//            }
+//        }
     }
     
     func nearEventsFiltered(by category: String) -> [EventModel] {

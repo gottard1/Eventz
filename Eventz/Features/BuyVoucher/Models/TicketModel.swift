@@ -20,7 +20,7 @@ struct TicketType: Identifiable, Equatable {
     let isSoldOff: Bool
     
     var totalPrice: Double {
-        return Double(quantity ?? 1) * price
+        return Double(quantity) * price
     }
     
     static func == (lhs: TicketType, rhs: TicketType) -> Bool {

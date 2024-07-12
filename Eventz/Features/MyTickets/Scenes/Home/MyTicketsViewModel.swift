@@ -38,6 +38,7 @@ struct MyTicketsModel: Identifiable {
 
 class MyTicketsViewModel: ObservableObject {
     
+    /// MOCK
     let tickets: [[MyTicketsModel]] = [
         [
             MyTicketsModel(

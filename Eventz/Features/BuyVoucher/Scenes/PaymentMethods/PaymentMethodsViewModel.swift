@@ -11,6 +11,7 @@ class PaymentMethodsViewModel: ObservableObject {
     
     var purchase: PurchaseSummaryModel
     
+    /// MOCK
     @Published var paymentMethods: [PaymentMethod] = [
         PaymentMethod(image: "pix-icon", title: "Pix", isSelected: true),
         PaymentMethod(image: "picpay-icon", title: "PicPay", isSelected: false),
